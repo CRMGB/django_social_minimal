@@ -1,6 +1,6 @@
 from django.apps import AppConfig
 
 
-class PollsConfig(AppConfig):
+class LogInSocialConfig(AppConfig):
     default_auto_field = 'django.db.models.BigAutoField'
-    name = 'polls'
+    name = 'log_in_social'
