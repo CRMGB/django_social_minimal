@@ -24,10 +24,6 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
-LOGIN_REDIRECT_URL = "profile/"
-LOGIN_URL = 'social_login/'
-
-
 # Application definition
 
 INSTALLED_APPS = [
@@ -84,6 +80,8 @@ AUTHENTICATION_BACKENDS = (
 
 SOCIAL_AUTH_GOOGLE_OAUTH2_KEY = os.environ.get("AUTH_GOOGLE_OAUTH2_KEY")
 SOCIAL_AUTH_GOOGLE_OAUTH2_SECRET = os.environ.get("AUTH_GOOGLE_OAUTH2_SECRET")
+
+LOGIN_URL = 'social_login/'
 
 WSGI_APPLICATION = 'django_social_project.wsgi.application'
 
