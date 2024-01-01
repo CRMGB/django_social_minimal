@@ -1,0 +1,7 @@
+{%load static%}
+{% load crispy_forms_tags %}
+{%block home%}
+<div class="container">
+   <a class="btn btn-primary" href="{% url 'social:begin' 'google-oauth2' %}"> <i class="fab fa-google"></i>&nbsp;Login</a>
+</div>
+{%endblock%}

@@ -1,0 +1,6 @@
+{% if user.is_authenticated %}
+<h3>Hello {{request.user.username}}</h3> <br><br>
+<h3>Email: {{request.user.email}}</h3> <br><br>
+{% else %}
+<h3>USER NOT FOUND</h3> <br><br>
+{% endif %}
