@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+{% load static %}
+  <html lang="en">
+  <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Social</title>
+      <link href="{% static 'fontawesomefree/css/fontawesome.css' %}" rel="stylesheet" type="text/css">
+      <link href="{% static 'fontawesomefree/css/brands.css' %}" rel="stylesheet" type="text/css">    
+      <link href="{% static 'mdb/bootstrap.css' %}" rel="stylesheet" type="text/css">
+  </head>
+  <body>
+    {% for message in messages %}
+    {% if message.tags == "error" %}
+    <div class="alert errorMessage alert--{{message.tags}}">
+      <p class="alert__message">{{message}}</p>
+      <a class="close Cbutton" data-bs-dismiss="alert" aria-label="Close">&times;</a>
+    </div>
+    {% endif %}
+    {% if message.tags == "success" %}
+    <div class="alert successMessage alert--{{message.tags}}">
+      <p class="alert__message">{{message}}</p>
+      <a class="close Cbutton" data-bs-dismiss="alert" aria-label="Close">&times;</a>
+    </div>
+    {% endif %}
+    {% endfor %}
+    {% block content %}
+    {% endblock content %}
+  
+  </body>
+  </html>
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
